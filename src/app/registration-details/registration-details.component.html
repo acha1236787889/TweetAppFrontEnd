@@ -1,0 +1,17 @@
+<h3 class="p-3 text-center">All Tweets</h3>
+<div class="container">
+    <form [formGroup]="form">
+    <div class="form-group">
+        <label for="email">User Name :</label>
+        <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter User Name"
+          name="username">
+      </div>
+      </form>
+      <button (click)=finduser() class="btn btn-success">Post Details</button>
+    
+            <div *ngFor="let user of reg | keyvalue">
+                <td>{{user.key}}</td>
+                <td>{{user.value}}</td>
+            </div>
+        
+</div>

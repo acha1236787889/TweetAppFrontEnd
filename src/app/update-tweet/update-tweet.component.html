@@ -1,0 +1,35 @@
+<div class="container col-lg-6">
+    <h1 class="text-center">Update Tweet</h1>
+    <div class="card">
+      <div class="card-body">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <label for="email">User Name :</label>
+            <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter User Name"
+              name="username">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Old Tweet:</label>
+            <input type="text" class="form-control" formControlName="tweetMessagetoBeUpdated" id="tweetMessagetoBeUpdated" placeholder="Enter password"
+              name="tweetMessagetoBeUpdated">
+          </div>
+          <div class="form-group">
+            <label for="pwd">New Tweet:</label>
+            <input type="text" class="form-control" formControlName="tweetmessage" id="tweetmessage" placeholder="Enter new Tweet"
+              name="tweetmessage">
+          </div>
+          
+          <button (click)=updatetweetmessage() class="btn btn-success">Update</button>
+          <p class="alert alert-success" *ngIf="k==1" >
+            <strong>Update  Success!</strong> 
+
+        </p>
+        <p class="alert alert-danger" *ngIf="k==2" >
+          <strong>Update Failed</strong> 
+
+      </p>
+        </form>
+      </div>
+    </div>
+  </div>
+

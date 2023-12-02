@@ -1,0 +1,50 @@
+<div class="container col-lg-6">
+    <h1 class="text-center">Registration</h1>
+    <div class="card">
+      <div class="card-body">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <label for="email">Login Id :</label>
+            <input type="text" class="form-control" id="login_id" formControlName="login_id" placeholder="Enter Login Id"
+              name="login_id">
+          </div>
+          <div class="form-group">
+            <label for="pwd">First Name:</label>
+            <input type="text" class="form-control" formControlName="first_name" id="first_name" placeholder="Enter First Name"
+              name="first_name">
+          </div>
+          <div class="form-group">
+            <label for="email">Last Name :</label>
+            <input type="text" class="form-control" id="last_name" formControlName="last_name" placeholder="Enter Last Name"
+              name="last_name">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Email:</label>
+            <input type="text" class="form-control" formControlName="email" id="email" placeholder="Enter Email"
+              name="email">
+          </div>
+          <div class="form-group">
+            <label for="email">Password :</label>
+            <input type="text" class="form-control" id="password" formControlName="password" placeholder="Enter Password"
+              name="password">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Confirm Password:</label>
+            <input type="text" class="form-control" formControlName="cnf_password" id="cnf_password" placeholder="Enter Password"
+              name="cnf_password">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Contact :</label>
+            <input type="text" class="form-control" formControlName="contact_number" id="contact_number" placeholder="Enter Contact"
+              name="contact_number">
+          </div>
+          <button (click)=registration() class="btn btn-success">Registration</button>
+          <p class="alert alert-success" *ngIf="show" >
+            <strong>Registration Success!</strong> 
+
+        </p>
+        </form>
+      </div>
+    </div>
+  </div>
+

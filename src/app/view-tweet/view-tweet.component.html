@@ -1,0 +1,21 @@
+<h3 class="p-3 text-center">All Tweets</h3>
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>TweetMessage</th>
+                <th>Like</th>
+                <th>Reply</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of tweet1">
+                <td>{{user.username}}</td>
+                <td>{{user.tweetmessage}}</td>
+                <td>{{user.like}}</td>
+                <td>{{user.reply}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

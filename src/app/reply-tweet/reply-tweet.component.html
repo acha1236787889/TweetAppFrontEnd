@@ -1,0 +1,52 @@
+<div class="container col-lg-6">
+    <h1 class="text-center">Reply Tweet</h1>
+    <div class="card">
+      <div class="card-body">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <label for="email">Username :</label>
+            <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter usernmae"
+              name="username">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Reply:</label>
+            <input type="text" class="form-control" formControlName="reply" id="tweetmessage" placeholder="Enter message"
+              name="reply">
+          </div>
+          <div class="form-group">
+            <label for="pwd">TweetMessage:</label>
+            <input type="text" class="form-control" formControlName="tweetmessage" id="tweetmessage" placeholder="Enter message"
+              name="tweetmessage">
+          </div>
+          
+          
+          
+          <button (click)=replytweet() class="btn btn-success">Post Message</button>
+          <button (click)=liketweet() class="btn btn-success">Like Tweet</button>
+          <button (click)=deletetweet() class="btn btn-success">Delete Tweet</button>
+          <p class="alert alert-success" *ngIf="k==1" >
+            <strong>Reply Success!</strong> 
+
+        </p>
+        <p class="alert alert-danger" *ngIf="k==2" >
+          <strong>Reply Failed</strong> 
+
+      </p>
+      <p class="alert alert-success" *ngIf="k==3" >
+        <strong>Liked</strong> 
+
+    </p>
+    <p class="alert alert-success" *ngIf="k==4" >
+      <strong>Deleted</strong> 
+
+  </p>
+  <p class="alert alert-success" *ngIf="k==5" >
+    <strong>Not Deleted</strong> 
+
+</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
